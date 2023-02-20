@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--   meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./script.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js"> -->
+    <title>Hello, world!</title>
+    <style>
+        .block{
+            display: block;
+        }
+        .none{
+            display: none;
+        }
+    </style>
+  </head>
+  <!-- <body style="background-color:lightcoral; color:white"> -->
+    <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">financial Solution</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">Disabled</a>
+                </li>
+              </ul>
+              
+            </div>
+          </nav>
+    </header>
+<section>
+  <div id="data_container" class="container">
+  </div>
+</section>
+<div>
+    <div style="text-align: center;display: flex;justify-content: center;margin:20px 40px 1px 1px;">
+        <a href="index.html" class="btn btn-primary " >go back</a>
+        </div>
+</div>
+<footer style="background-color:coral  ;">
+    <p style="font-size: 20px;font-weight: bold; text-align: center;">made by rajendra jangid mobile_no: 9819497296</p>
+    <p style="font-size: 20px;font-weight: bold;text-align: center  ;">email_id:rajendra.jangidsm@gmail.com</p>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script>
+        
+const data_container = document.querySelector("#data_container");
+
+
+let ss = JSON.parse(localStorage.getItem('object'));
+console.log(ss)
+let sum = 0;
+for(let i of Object.values(ss)){
+  
+  if(typeof(i) == "number"){
+    if(ss.salary == i){
+      
+    }else{
+      sum+=i;
+    }
+  
+  }else{
+    console.log("hello worldd")
+  }
+}
+function overview(){
+  if(ss.salary-sum>(ss.salary/100*10)){
+    return "you are good to save the money"
+  }else{
+    return "you have to save the money"
+  }
+}
+const html =`
+<h1 style="margin-top: 10px;">Here are some tips to save your money</h1>
+ <p style="margin-top: 10px;" class="font-size">your salary is ${ss.salary}rs and you have invest money ${sum}rs</p>
+ <p style="margin-top: 10px;font-size:45px;font-weight:bold;border:1px solid grey;background-color:grey;padding:13px">${overview()}</p>
+ <p style="margin-top: 10px;" class="font-size">you are living in ${ss.house}</p>
+ <p style="margin-top: 10px;" class="font-size">you have invested <span style="background-color: grey;">${ss.entertainment}</span> in entertainment like ${ss.entertainment_checkbox.map(ele=>ele)} but you only have to invest <span style="background-color:grey">${(ss.salary/100*2)}</span>rs</p>
+ <p style="margin-top: 10px;" class="font-size">you have invested <span style="background-color: grey;">${ss.foods}</span>rs in food like ${ss.food_checkbox.map(ele=>ele)}  but you only have to invest <span style="background-color: grey;">${(ss.salary/100*10)}</span>rs</p>
+ <p style="margin-top: 10px;" class="font-size">you have invested <span style="background-color: grey;">${ss.sharemarket}</span> rs in sharemarket  but you only have to invest <span style="background-color:grey">${(ss.salary/100*10)}</span>rs </p>
+ <p style="margin-top: 10px;" class="font-size">you have invested <span style="background-color: grey;">${ss.transport}</span> rs in transport  but you only have to invest <span style="background-color:grey">${(ss.salary/100*15)}</span>rs</p>
+ <p style="margin-top: 10px;" class="font-size">you have invested <span style="background-color:grey">${ss.movie}</span> rs in movie  but you only have to invest <span style="background-color:grey">${(ss.salary/100*2)}</span>rs</p>
+ <p style="margin-top: 10px;" class="font-size">you have invested <span style="background-color:grey">${ss.cloths}</span>rs in cloth  but you only have to invest <span style="background-color:grey">${(ss.salary/100*10)}</span>rs</p>
+ <p style="margin-top: 10px;" class="font-size">you have invested <span style="background-color:grey">${ss.rent}</span>rs in rent  but you only have to invest <span style="background-color:grey">${(ss.salary/100*35)} to  ${(ss.salary/100*40)}</span>rs</p>
+ <p style="margin-top: 10px;" class="font-size">you saving is <span style="background-color:grey">${(ss.salary)-sum}</span>rs</p>
+
+`
+
+
+// <div class="ress">
+    
+
+//     <p style="margin-top: 10px;" class="font-size">you have to save<span style="background-color:grey">${(ss.salary/100*30)}</span>rs</p>
+   
+//    </div>
+console.log(document.querySelector(".ress"))
+console.log((ss.salary)-sum>(ss.salary/100*30))
+function save(){
+    if((ss.salary)-sum>(ss.salary/100*30)){
+        document.querySelectorAll(".res").classList.add("none");
+    }else{
+        document.querySelectorAll(".res").classList.remove("none");
+    }
+}
+data_container.insertAdjacentHTML('beforeend',html);
+// console.log(sum)
+console.log((ss.salary)-sum);
+    </script>
+  </body>
+</html>

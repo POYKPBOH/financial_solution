@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--   meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./script.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js"> -->
+    <title>Hello, world!</title>
+    
+  </head>
+  <!-- <body style="background-color:lightcoral; color:white"> -->
+    <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="./index.html">financial Solution</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">Disabled</a>
+                </li>
+              </ul>
+              
+            </div>
+          </nav>
+    </header>
+    <section class="container" style="margin-top: 50px;">
+      <div class="flex">
+        <div style="display: flex;flex-direction: column;justify-content: center;">
+          <h1 style="font-size: 40px;">The easiest way
+            to manage personal finances
+            
+           </h1><h1 style="margin-top: 30px;font-size: 50px">Money Manager</h1>
+        </div>
+        <div class="financial_image">
+          <img src="./assets/financial.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+
+    <section class="container" style="margin-top: 50px; border: 3px solid black;padding: 60px;">
+        <h1 style="font-size: 50px;text-align: center;">Tell us where your money is invest</h1>
+        <h2>step 1</h2>
+
+       <form action="">
+
+        <label  class="font-size" for="salary">your monthly salary</label>
+        <input class="font-size" type="input" id="salary" name="vehicle1" value="" placeholder="eg:10000"  >
+        
+        <p class="font-size" style="margin-top: 10px;">you have your own house or rented house</p>
+
+        <div class="home"> 
+          
+        
+          <input  type="checkbox" id="0" value="Value1" onclick="selectOnlyThis(this.id)" >
+          <p style="margin-left: 5px;"  class="inline font-size">own house</p>
+
+          <input type="checkbox" id="1" value="Value1" onclick="selectOnlyThis(this.id)" >
+          <p class="inline font-size" style="margin-left: 5px;">rented house</p>  
+        </div>
+
+
+
+
+        
+        <div class="home" style="margin-top: 10px;"> 
+          <p class="entertainment font-size">Entertainment subscription</p>
+          <input type="checkbox" id="amazone" value="Value1" onclick="selectOnlyThiss(this.id)" ><p class="inline font-size"style="margin-left: 5px;">amazone</p>
+
+          <input type="checkbox" id="disney" value="Value1" onclick="selectOnlyThiss(this.id)" ><p class="inline font-size"style="margin-left: 5px;">disney</p>
+          <input type="checkbox" id="hotstar" value="Value1" onclick="selectOnlyThiss(this.id)" ><p style="margin-left: 5px;" class="inline font-size">hotstar</p>
+
+          <input type="checkbox" id="others" value="Value1" onclick="selectOnlyThiss(this.id)" ><p class="inline font-size">others</p>    
+        </div>
+
+       
+        <label style="margin-top: 10px;" class="font-size" for="entertainment">total amount in entertainment</label>
+        <input class="font-size" type="input" id="entertainment" name="vehicle1" value="" placeholder="enter total subscription amount "  >
+        
+        <p style="margin-top: 10px;" class="font-size" id="food">food subscription</p> 
+        <div style="margin-top: 10px;">
+          <input type="checkbox" id="zomato" value="Value1" onclick="selectOnlyThisfood(this.id)" ><p style="margin-left: 5px;" class="inline font-size">zomato</p>
+
+          <input type="checkbox" id="swiggy" value="Value1" onclick="selectOnlyThisfood(this.id)" ><p style="margin-left: 5px;" class="inline font-size">swiggy</p>
+
+          <input type="checkbox" id="uber" value="Value1" onclick="selectOnlyThisfood(this.id)" ><p style="margin-left: 5px;" class="inline font-size">uber</p>
+
+          <input type="checkbox" id="other" value="Value1" onclick="selectOnlyThisfood(this.id)" ><p style="margin-left: 5px;" class="inline font-size">others</p>  
+        </div>
+        <label  style="margin-top: 10px;" for="input" class="font-size">total amount in food</label>
+        <input id="foods" type="input" class="font-size" id="input" name="vehicle1" value="" placeholder="enter you money invest in food" ><br>
+
+        <label style="margin-top: 10px;" for="sharemarket" class="font-size">how much money you invest in sharemarket</label>
+        <input type="input" id="sharemarket" name="vehicle1" value="" placeholder="eg:10000" class="font-size" ><br>
+
+        <label style="margin-top: 10px;" for="transport" class="font-size">how much money you invest in transport</label>
+        <input type="input" class="font-size" id="transport" name="vehicle1" value=""   placeholder="eg:10000"><br>
+
+        <label style="margin-top: 10px;" for="movie" class="font-size">how much money you invest in movie</label>
+        <input type="input" class="font-size" id="movie" name="vehicle1" value=""   placeholder="eg:10000"><br>
+
+        <label style="margin-top: 10px;" for="cloth" class="font-size">how much money you invest in cloths</label>
+        <input type="input" class="font-size" id="cloth" name="vehicle1" value=""   placeholder="eg:10000"><br>
+
+        <label style="margin-top: 10px;" for="rent" class="font-size">how much money you give for rent</label>
+        <input placeholder="eg:10000" type="input" class="font-size" id="rent" name="vehicle1" value="" class="">
+        <br>
+        <!-- <input type="submit" class="font-size" id="submit" > -->
+        <button id ="submit" class="font-size btn btn-primary">submit</button>
+        <!-- <p class="font-size scroll-down block" style="margin-top: 10px;font-weight: bold;">scroll down to see the result</p> -->
+        
+        
+
+
+       </form>
+
+    </section>
+<section>
+<div style="text-align: center;display: flex;justify-content: center;margin:20px  1px 100px 1px;">
+<a href="result.html" class="btn btn-primary " >click here to see the result</a>
+</div>
+ 
+</section>
+<footer style="background-color:coral  ;">
+  <p style="font-size: 20px;font-weight: bold; text-align: center;">made by rajendra jangid mobile_no: 9819497296</p>
+  <p style="font-size: 20px;font-weight: bold;text-align: center  ;">email_id:rajendra.jangidsm@gmail.com</p>
+</footer>
+<!-- 
+    <section>
+      <input type="checkbox" id="1" value="Value1" onclick="selectOnlyThis(this.id)" /><p> Option 1</p>
+      <input type="checkbox" id="2" value="Value1" onclick="selectOnlyThis(this.id)" /> Option 2
+      <input type="checkbox" id="3" value="Value1" onclick="selectOnlyThis(this.id)" /> Option 3
+      <input type="checkbox" id="4" value="Value1" onclick="selectOnlyThis(this.id)" /> Optio
+    </section>
+ -->
+ <!-- <h1 style="margin-top: 10px;">Here are some tips to save your money</h1>
+ <p style="margin-top: 10px;" class="font-size">your salary is ${ss.salary}rs and you have invest money ${sum}rs</p>
+ <p style="margin-top: 10px;font-size:45px;font-weight:bold;border:1px solid grey;background-color:grey;padding:13px">${overview()}</p>
+ <p style="margin-top: 10px;" class="font-size">you are living in ${ss.house}</p>
+ <p style="margin-top: 10px;" class="font-size">you have investedrs <span style="background-color: grey;">${ss.entertainment}</span> in entertainment like ${ss.entertainment_checkbox.map(ele=>ele)} but you only have to invest <span style="background-color:grey">${(ss.salary/100*2)}</span>rs</p>
+ <p style="margin-top: 10px;" class="font-size">you have invested <span style="background-color: grey;">${ss.foods}</span>rs in food like ${ss.food_checkbox.map(ele=>ele)}  but you only have to invest <span style="background-color: grey;">${(ss.salary/100*10)}</span>rs</p>
+ <p style="margin-top: 10px;" class="font-size">you have invested <span style="background-color: grey;">${ss.sharemarket}</span> rs in sharemarket  but you only have to invest <span style="background-color:grey">${(ss.salary/100*10)}</span>rs </p>
+ <p style="margin-top: 10px;" class="font-size">you have invested <span style="background-color: grey;">${ss.transport}</span> rs in transport  but you only have to invest <span style="background-color:grey">${(ss.salary/100*15)}</span>rs</p>
+ <p style="margin-top: 10px;" class="font-size">you have invested <span style="background-color:grey">${ss.movie}</span> rs in movie  but you only have to invest <span style="background-color:grey">${(ss.salary/100*2)}</span>rs</p>
+ <p style="margin-top: 10px;" class="font-size">you have invested <span style="background-color:grey">${ss.cloths}</span>rs in cloth  but you only have to invest <span style="background-color:grey">${(ss.salary/100*10)}</span>rs</p>
+ <p style="margin-top: 10px;" class="font-size">you have invested <span style="background-color:grey">${ss.rent}</span>rs in rent  but you only have to invest <span style="background-color:grey">${(ss.salary/100*35)} to  ${(ss.salary/100*40)}</span>rs</p>
+ <p style="margin-top: 10px;" class="font-size">you saving is <span style="background-color:grey">${(ss.salary)-sum}</span>rs</p> -->
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>

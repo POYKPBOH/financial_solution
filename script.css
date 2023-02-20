@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+.container{
+    width: 1250px;
+    margin: 0 auto;
+    /* height: 100vh; */
+}
+.inline{
+    display:inline;
+}
+.flex{
+    display: flex;
+}
+.financial_image img{
+    width: auto;
+    height:350px;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: flex-start;
+    align-items: center;
+}
+.font-size{
+    font-size:20px;
+}
+p{
+    margin-top: 10px;
+}
+input{
+    margin-top: 10px;
+}
+.none{
+    display: block;
+}
+.block{
+    display: none;
+}
